@@ -1,0 +1,31 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Allows prettier to format non JS/TS related files such as JSON, HTML,LESS etc
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true,
+    "eslint.alwaysShowStatus": true,
+    // Use eslint to format JS/TS files
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    // Show linting errors in VSCode editor
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}

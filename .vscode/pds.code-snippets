@@ -1,0 +1,134 @@
+{
+    // Place your ep-web-ui-components-react workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+    // Placeholders with the same ids are connected.
+    // Example:
+    "Create PDS Component": {
+        "scope": "typescriptreact",
+        "prefix": "pds component",
+        "body": [
+            "import tw from \"twin.macro\";",
+            "import styled from \"styled-components\";",
+            "",
+            "// The component's public interface.",
+            "export type ${0:Component}Props = {",
+            "\t// children: React.ReactNode; // Uncomment if component accepts children ",
+            "} & React.HTMLAttributes<HTMLDivElement>; // Replace HTMLAttributes and HTMLDivElement with the appropriate types for the root element of the component",
+            "",
+            "// The styled component's interface.",
+            "type Styled${0:Component}Props = {",
+            "\t// Define interface here... ",
+            "};",
+            "",
+            "const baseStyles = tw`/** use Tailwind utilities here*/`;",
+            "",
+            "// Apply CSS by creating a styled component.",
+            "const Styled${0:Component} = styled.div<Styled${0:Component}Props>`",
+            "\t\\${baseStyles};",
+            "\t${(props) => `/** define conditional styles */`};",
+            "`;",
+            "",
+            "/**",
+            "\tDescription of the component that will be displayed in the Storybook docs page.",
+            "*/",
+            "export const Pds${0:Component} = ({",
+            "\t//foo = false, // define a default value for the prop",
+            "\t//children, // uncomment if component accepts children",
+            "\t...props",
+            "}: ${0:Component}Props): JSX.Element => (",
+            "\t<Styled${0:Component} {...props}>",
+            "\t\t{/* children */}",
+            "\t</Styled${0:Component}>",
+            ");"
+        ],
+        "description": "Create a PDS component"
+    },
+    "PDS Component Unit Test": {
+        "scope": "typescriptreact",
+        "prefix": "pds unit test",
+        "body": [
+            "import { expect } from \"@jest/globals\";",
+            "import { fireEvent, render } from \"@testing-library/react\";",
+            "import { Pds${0:Component} } from \"./${0:Component}\";",
+            "",
+            "describe(\"${0:Component}\", () => {",
+            "",
+            "// Define a complex test scenario that is used in multiple tests.",
+            "// const TestScenario = () => (",
+            "// \t<div>",
+            "// \t\t<Pds${0:Component}></Pds${0:Component}>",
+            "// \t</div>",
+            "// );",
+            "",
+            "it(\"should call onClick when clicked\", () => {",
+            "\tconst handleClick: () => void = jest.fn();",
+            "",
+            "\tconst { getByText } = render(<Pds${0:Component} onClick={handleClick}>Test</Pds${0:Component}>);",
+            "\tconst component = getByText(\"Test\")",
+            "",
+            "\tfireEvent.click(component)",
+            "\texpect(handleClick).toHaveBeenCalledTimes(1)",
+            "\t});",
+            "});"
+        ],
+        "description": "PDS component unit test"
+    },
+    "PDS Component End to End Test (Cypress)": {
+        "scope": "typescriptreact",
+        "prefix": ["pds e2e test", "pds cypress test"],
+        "body": [
+            "import { composeStories } from \"@storybook/testing-react\";",
+            "import { mount } from \"@cypress/react\";",
+            "import * as stories from \"./${0:Component}.stories\";",
+            "",
+            "// Extract Storybook stories to test.",
+            "const { Basic } = composeStories(stories)",
+            "",
+            "describe(\"${0:Component}\", () => {",
+            "",
+            "\tit(\"should be accessible\", () => {",
+            "\t\tcy.injectAxe();",
+            "\t\tmount(<Basic />);",
+            "\t\tcy.checkA11y(\"query selector\");", // select the components to be tested.
+            "\t});",
+            "",
+            "\t// Define other tests here...",
+            "",
+            "});"
+        ],
+        "description": "PDS component end to end/Cypress test"
+    },
+    "PDS Component Stories": {
+        "scope": "typescriptreact",
+        "prefix": ["pds stories", "story"],
+        "body": [
+            "import { ComponentStory, Meta } from \"@storybook/react\";",
+            "import { ${0:Component}Props, Pds${0:Component} } from \"./${0:Component}\";",
+            "",
+            "export default {",
+            "\ttitle: \"Components/${0:Component}\",",
+            "\tcomponent: Pds${0:Component}",
+            "} as Meta;",
+            "",
+            "// This story is used to showcase different states of the component with different prop configurations in Storybook.",
+            "// See https://storybook.js.org/docs/react/essentials/controls for more details.",
+            "export const Basic: ComponentStory<typeof Pds${0:Component}> = ({ variant, ...args }: ${0:Component}Props) => (",
+            "\t<Pds${0:Component} variant={variant} {...args}></Pds${0:Component}>",
+            ");",
+            "",
+            "Basic.args = {",
+            "\tfoo: false, // define default values for Storybook Prop Table controls",
+            "};",
+            "",
+            "export const Story: ComponentStory<typeof Pds${0:Component}> = () => (",
+            "\t<>",
+            "\t\t{/** define story content here */}",
+            "\t</>",
+            ");"
+        ],
+        "description": "PDS component stories"
+    }
+}
