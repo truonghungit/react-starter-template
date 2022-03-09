@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 
-export default function SigninPage() {
+export default function SignInPage() {
   const [credentials, setCredentials] = useState({
     email: 'email',
     password: '',
@@ -67,7 +67,7 @@ export default function SigninPage() {
             <p className='text-sm text-center text-gray-400'>
               Don&#x27;t have an account yet? &nbsp;
               <a
-                href='/signup'
+                href='/sign-up'
                 className='font-semibold text-indigo-500 focus:text-indigo-600 focus:outline-none focus:underline'
               >
                 Sign up

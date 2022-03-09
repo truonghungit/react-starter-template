@@ -1,23 +1,23 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-import AuthLayout from '../layout/AuthLayout/AuthLayout';
+import MinimalLayout from '@/layout/MinimalLayout/MinimalLayout';
 
-const SigninPage = lazy(() => import('../views/Signin/Signin'));
-const SignupPage = lazy(() => import('../views/Signup/Signup'));
+const SignInPage = lazy(() => import('../views/SignInPage/SignInPage'));
+const SignUpPage = lazy(() => import('../views/SignUpPage/SignUpPage'));
 
 export const AuthRoutes: Array<RouteObject> = [
   {
     path: '/',
-    element: <AuthLayout />,
+    element: <MinimalLayout />,
     children: [
       {
-        path: 'signin',
-        element: <SigninPage />,
+        path: 'sign-in',
+        element: <SignInPage />,
       },
       {
-        path: 'signup',
-        element: <SignupPage />,
+        path: 'sign-up',
+        element: <SignUpPage />,
       },
     ],
   },

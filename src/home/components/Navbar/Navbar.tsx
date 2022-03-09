@@ -64,13 +64,13 @@ export default function Navbar() {
             </div>
             <div className='flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0'>
               <Link
-                to='/signin'
+                to='/sign-in'
                 className='w-full px-6 py-2 mr-0 text-gray-200 md:px-0 lg:pl-2 md:mr-4 lg:mr-5 md:w-auto'
               >
                 Sign In
               </Link>
               <Link
-                to='/signup'
+                to='/sign-up'
                 className='inline-flex items-center w-full px-6 py-3 text-sm font-medium leading-4 text-white bg-indigo-600 md:px-3 md:w-auto md:rounded-full lg:px-5 hover:bg-indigo-500 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-indigo-600'
               >
                 Sign Up

@@ -1,10 +1,9 @@
 import { Outlet } from 'react-router-dom';
 
-export default function AuthLayout() {
+export default function MinimalLayout() {
   return (
-    <div>
-      AuthLayout
+    <>
       <Outlet />
-    </div>
+    </>
   );
 }

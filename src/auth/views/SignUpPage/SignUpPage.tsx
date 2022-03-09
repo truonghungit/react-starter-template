@@ -54,7 +54,7 @@ export default function SignupPage() {
 
         <div className='text-grey-dark mt-6'>
           Already have an account? &nbsp;
-          <Link to='/signin' className='no-underline border-b border-blue text-blue-500'>
+          <Link to='/sign-in' className='no-underline border-b border-blue text-blue-500'>
             Sign in
           </Link>
           .

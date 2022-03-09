@@ -20,9 +20,5 @@ export default function AppRouting() {
     ...PortalRoutes,
   ]);
 
-  return (
-    <BrowserRouter>
-      <Suspense fallback={<PageLoader />}>{routes}</Suspense>
-    </BrowserRouter>
-  );
+  return <Suspense fallback={<PageLoader />}>{routes}</Suspense>;
 }
