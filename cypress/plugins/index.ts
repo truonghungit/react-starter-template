@@ -13,10 +13,10 @@
 // the project's config changing)
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require("path");
+const path = require('path');
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { startDevServer } = require("@cypress/vite-dev-server");
+const { startDevServer } = require('@cypress/vite-dev-server');
 
 /**
  * @type {Cypress.PluginConfig}
@@ -25,11 +25,11 @@ const { startDevServer } = require("@cypress/vite-dev-server");
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-  on("dev-server:start", options => {
+  on('dev-server:start', options => {
     return startDevServer({
       options,
       viteConfig: {
-        configFile: path.resolve(__dirname, "..", "..", "vite.config.ts"),
+        configFile: path.resolve(__dirname, '..', '..', 'vite.config.ts'),
       },
     });
   });

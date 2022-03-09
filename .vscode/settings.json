@@ -1,31 +1,41 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode", // Allows prettier to format non JS/TS related files such as JSON, HTML,LESS etc
-    "editor.formatOnSave": true,
-    "eslint.format.enable": true,
-    "eslint.alwaysShowStatus": true,
-    // Use eslint to format JS/TS files
-    "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
-    // Show linting errors in VSCode editor
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "workbench.colorCustomizations": {
+    // Activity Bar
+    // The Activity Bar is displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
+    "activityBar.background": "#171520",
+    "activityBar.dropBackground": "#34294f66",
+    "activityBar.foreground": "#ffffffCC",
+    "activityBarBadge.background": "#5b21b6",
+    "activityBarBadge.foreground": "#e5e7eb",
+    // Status Bar Colors
+    // The Status Bar is shown in the bottom of the workbench.
+    "statusBar.background": "#171520",
+    "statusBar.foreground": "#5b21b6",
+    "statusBarItem.prominentBackground": "#2a2139",
+    "statusBarItem.prominentHoverBackground": "#34294f"
+  },
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Allows prettier to format non JS/TS related files such as JSON, HTML,LESS etc
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  // Use eslint to format JS/TS files
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // Show linting errors in VSCode editor
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

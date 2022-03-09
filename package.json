@@ -9,8 +9,8 @@
     "build": "npm run typecheck && vite build",
     "commit": "git-cz",
     "dev": "vite",
+    "eslint": "eslint . --ext .ts,.tsx",
     "format": "prettier . --write --ignore-path .gitignore && git update-index --again",
-    "lint": "eslint . --ext .ts,.tsx --fix --ignore-path .gitignore",
     "prepare": "husky install",
     "serve": "npm run build && vite preview --port 3000",
     "test:e2e": "start-server-and-test serve http://127.0.0.1:3000/ 'cypress open'",
@@ -32,16 +32,17 @@
   },
   "config": {
     "commitizen": {
-      "path": "@commitlint/cz-commitlint"
+      "path": "cz-conventional-changelog"
     }
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@commitlint/cz-commitlint": "^15.0.0",
     "@cypress/vite-dev-server": "^2.2.2",
     "@testing-library/jest-dom": "^5.16.1",
@@ -56,9 +57,10 @@
     "@typescript-eslint/parser": "^5.8.0",
     "@vitejs/plugin-legacy": "^1.6.4",
     "@vitejs/plugin-react-refresh": "^1.3.6",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.2",
     "commitizen": "^4.2.4",
     "cypress": "^9.1.1",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
@@ -76,11 +78,13 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.5",
     "lint-staged": "^12.1.3",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "postcss-import": "^14.0.2",
     "prettier": "^2.5.1",
+    "sass": "^1.49.7",
     "sort-package-json": "^1.53.1",
     "start-server-and-test": "^1.14.0",
+    "tailwindcss": "^3.0.18",
     "ts-jest": "^27.1.2",
     "typescript": "^4.5.4",
     "vite": "^2.7.4"
