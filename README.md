@@ -1,5 +1,7 @@
 # React Starter Template
 
+![React stater template](./docs/assets/react-stater-template.jpg)
+
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) starter template built with [Vite](https://vitejs.dev). We provide everything you'll need to get started building React Apps.
 
 **Awesome thing you get _out-of-the-box_ are:**
@@ -96,11 +98,7 @@ We format our commit messages using [Commitizen](https://github.com/commitizen/c
 
 - It is **important** that you use Commitizen when making commits
 
-- In your **terminal** run `npx git-cz` when making a commit to enter the interactive GUI.
-
-  _(there is no installation required)_
-
-  ![commitizen-demo-small](https://user-images.githubusercontent.com/68086348/101716472-2e700a00-3b02-11eb-937b-14bd12eccba5.gif)
+- In your **terminal** run `yarn commit` when making a commit to enter the interactive GUI.
 
 ## 💾 Pull Requests
 
@@ -122,6 +120,9 @@ Make sure to _**ALWAYS**_ rebase _(not merge)_ `master` into your local branch w
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Tailwind CSS](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [VS Code Jest](https://marketplace.visualstudio.com/items?itemName=orta.vscode-jest)
 
 ## License
 
