@@ -119,7 +119,7 @@ We always _**Squash**_ our _Pull Requests_. This makes a `cherry-pick` from `mas
 
 Make sure to _**ALWAYS**_ rebase _(not merge)_ `master` into your local branch when developing. We strive for a flat Git commit history when possible.
 
-## Recommended VS Code extensions
+## 🧰 Recommended VS Code extensions
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -127,6 +127,11 @@ Make sure to _**ALWAYS**_ rebase _(not merge)_ `master` into your local branch w
 - [Tailwind CSS](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [VS Code Jest](https://marketplace.visualstudio.com/items?itemName=orta.vscode-jest)
 
-## License
+## 📝 License
 
-This project is licensed under the MIT License.
+Copyright © 2022 truonghungit. This source code is licensed under the MIT license found in the
+[LICENSE](https://github.com/truonghungit/react-starter-template/blob/master/LICENSE) file.
+
+---
+
+<sup>Made with ♥ by truonghungit.</sup>
