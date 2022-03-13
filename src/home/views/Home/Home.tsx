@@ -42,8 +42,8 @@ export default function HomePage() {
         <Navbar />
         <Header />
 
-        <div className='m-5 p-5'> hihi</div>
-        <div className='m-5 p-5'> hihi</div>
+        <div className='m-5 p-5'></div>
+        <div className='m-5 p-5'></div>
       </div>
 
       <div className='container mx-auto xl:max-w-7xl'>
