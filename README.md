@@ -1,5 +1,8 @@
 # React Starter Template
 
+[![license](https://img.shields.io/github/license/truonghungit/react-starter-template?style=flat-square)](https://github.com/truonghungit/react-starter-template/blob/master/LICENSE)
+[![code style: prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 ![React stater template](./docs/assets/react-stater-template.jpg)
 
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) starter template built with [Vite](https://vitejs.dev). We provide everything you'll need to get started building React Apps.
