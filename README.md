@@ -52,7 +52,7 @@ yarn install
 Start your application in local development server with hot reload at http://localhost:3000.
 
 ```bash
-yarn dev
+yarn start
 ```
 
 ## 🤖 Testing
