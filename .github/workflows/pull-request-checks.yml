@@ -23,7 +23,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
       - name: 📦 Install dependencies
         run: yarn install
       - name: 🤖 Run unit tests with coverage
