@@ -1,5 +1,6 @@
 # React Starter Template
 
+[![Pull Request Checks](https://github.com/truonghungit/react-starter-template/actions/workflows/pull-request-checks.yml/badge.svg)](https://github.com/truonghungit/react-starter-template/actions/workflows/pull-request-checks.yml)
 [![license](https://img.shields.io/github/license/truonghungit/react-starter-template?style=flat-square)](https://github.com/truonghungit/react-starter-template/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
