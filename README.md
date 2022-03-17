@@ -1,8 +1,11 @@
 # React Starter Template
 
 [![Pull Request Checks](https://github.com/truonghungit/react-starter-template/actions/workflows/pull-request-checks.yml/badge.svg)](https://github.com/truonghungit/react-starter-template/actions/workflows/pull-request-checks.yml)
-[![license](https://img.shields.io/github/license/truonghungit/react-starter-template?style=flat-square)](https://github.com/truonghungit/react-starter-template/blob/master/LICENSE)
-[![code style: prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![react](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![stars](https://img.shields.io/github/stars/truonghungit/react-starter-template.svg)
+[![license](https://img.shields.io/github/license/truonghungit/react-starter-template?style=flat)](https://github.com/truonghungit/react-starter-template/blob/master/LICENSE)
+[![code style: prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 
 ![React stater template](./docs/assets/react-stater-template.jpg)
 
