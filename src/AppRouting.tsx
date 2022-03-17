@@ -1,23 +1,30 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter, useRoutes } from 'react-router-dom';
+import { Suspense } from 'react';
+import { useRoutes } from 'react-router-dom';
 
-import { AuthRoutes } from './auth/routes';
-import { PortalRoutes } from './portal/routes';
+import authRoutes from './features/auth/routes';
+import dashboardRoutes from './features/dashboard/routes';
+import homeRoutes from './features/home/routes';
+import usersRoutes from './features/users/routes';
+import MinimalLayout from './layout/MinimalLayout/MinimalLayout';
+import PortalLayout from './layout/PortalLayout/PortalLayout';
 
 const PageLoader = () => {
   return <div>Loading...</div>;
 };
 
-const Home = lazy(() => import('./home/views/Home/Home'));
-
 export default function AppRouting() {
   const routes = useRoutes([
+    ...homeRoutes,
     {
-      path: '',
-      element: <Home />,
+      path: '/',
+      element: <MinimalLayout />,
+      children: [...authRoutes],
     },
-    ...AuthRoutes,
-    ...PortalRoutes,
+    {
+      path: '/',
+      element: <PortalLayout />,
+      children: [...dashboardRoutes, ...usersRoutes],
+    },
   ]);
 
   return <Suspense fallback={<PageLoader />}>{routes}</Suspense>;
