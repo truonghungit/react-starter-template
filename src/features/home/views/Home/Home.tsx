@@ -1,13 +1,13 @@
-import Features from '../../components/Features/Features';
+import Feature from '../../components/Feature/Feature';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 
-type FeatureProps = {
+type MainFeatureProps = {
   title: string;
 };
 
-const Feature = ({ title }: FeatureProps) => {
+const MainFeature = ({ title }: MainFeatureProps) => {
   return (
     <div className='px-8 py-12 mx-4 mt-8 text-center bg-white rounded-lg shadow-md border-2 border-gray-50 hover:border-indigo-500'>
       <div className='relative inline-block'>
@@ -31,6 +31,45 @@ const Feature = ({ title }: FeatureProps) => {
     </div>
   );
 };
+
+const allFeatures = [
+  {
+    title: 'React 17',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'Vite',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'TypeScript',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'React Router 6',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'Tailwind CSS',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'Cypress',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'EsLint',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'CommitLint',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+  {
+    title: 'Regular Updates',
+    description: 'Each of our plan will provide you and your team with certifications.',
+  },
+];
 
 export default function HomePage() {
   return (
@@ -60,13 +99,13 @@ export default function HomePage() {
         </div>
         <div className='justify-center flex'>
           <div className='w-full sm:w-2/3 lg:w-1/3'>
-            <Feature title='Clean' />
+            <MainFeature title='Clean' />
           </div>
           <div className='w-full sm:w-2/3 lg:w-1/3'>
-            <Feature title='Robust' />
+            <MainFeature title='Robust' />
           </div>
           <div className='w-full sm:w-2/3 lg:w-1/3'>
-            <Feature title='Powerful' />
+            <MainFeature title='Powerful' />
           </div>
         </div>
       </div>
@@ -149,7 +188,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Features />
+      <section className='py-20 bg-white'>
+        <div className='container mx-auto xl:max-w-7xl'>
+          <h2 className='text-4xl font-bold tracking-tight text-center'>Amazing Features</h2>
+          <p className='mt-2 text-lg text-center text-gray-600'>Check out our list of awesome features below.</p>
+          <div className='grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0'>
+            {allFeatures.map(({ title, description }) => (
+              <Feature key={title} title={title} description={description} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
