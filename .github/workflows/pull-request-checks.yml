@@ -12,21 +12,32 @@ jobs:
     name: "Build and Test"
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Get Yarn cache path
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup Node
+        uses: actions/setup-node@master
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - name: 📦 Install dependencies
-        run: yarn install
-      - name: 🤖 Run unit tests with coverage
+          node-version: 14.x
+
+      - name: Load Yarn cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile && yarn bootstrap
+
+      - name: Run unit tests with coverage
         run: yarn test:unit:coverage
-      - name: 🏗 Build
+
+      - name: Build app
         run: yarn build
