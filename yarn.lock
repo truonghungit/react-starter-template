@@ -661,11 +661,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@eztek/prettier-config@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@eztek/prettier-config/-/prettier-config-1.1.0.tgz#3c663f5b435f036bcd6328a4189023280f2684c4"
-  integrity sha512-Ag/S57+FSSmJLtc8J4AvhemecZInRlGvWtcH31ibv+x1DXitSsd03BS4paajjQw4C0rW+1DQt1FAGoZMVzRO/w==
-
 "@hapi/hoek@^9.0.0":
   version "9.2.1"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.1.tgz#9551142a1980503752536b5050fd99f4a7f13b17"

@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 
 import { render } from '@testing-library/react';
 
-import UsersPage from './UsersPage';
+import UsersPage from './users-page';
 
 describe('UsersPage', () => {
   it('should', () => {
