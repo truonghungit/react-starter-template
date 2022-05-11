@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const UsersPage = lazy(() => import('../views/UsersPage/UsersPage'));
-const UserDetailPage = lazy(() => import('../views/UsersPage/UsersPage'));
-const UserCreationPage = lazy(() => import('../views/UserCreationPage/UserCreationPage'));
+const UsersPage = lazy(() => import('../views/users-page/users-page'));
+const UserDetailPage = lazy(() => import('../views/users-page/users-page'));
+const UserCreationPage = lazy(() => import('../views/user-creation-page/user-creation-page'));
 
 const usersRoutes: Array<RouteObject> = [
   {
