@@ -1,130 +1,150 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function SignInPage() {
-  const [credentials, setCredentials] = useState({
-    email: 'email',
-    password: '',
-  });
-
-  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setCredentials({
-      ...credentials,
-      email: event.target.value,
-    });
-  };
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-  };
-
   return (
-    <div className='flex justify-center min-h-screen bg-gray-100'>
-      <div className='container sm:mt-40 mt-24 my-auto max-w-md border-2 border-gray-200 p-3 bg-white'>
-        <div className='text-center my-6'>
-          <h1 className='text-3xl font-semibold text-gray-700'>Sign in</h1>
-          <p className='text-gray-500'>Sign in to access your account</p>
+    <>
+      <div className='min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
+        <div className='sm:mx-auto sm:w-full sm:max-w-md'>
+          <Link to='/'>
+            <img
+              className='mx-auto h-12 w-auto'
+              src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg'
+              alt='Workflow'
+            />
+          </Link>
+          <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Sign in to your account</h2>
+          <p className='mt-2 text-center text-sm text-gray-600'>
+            Or{' '}
+            <Link to='/sign-up' className='font-medium text-indigo-600 hover:text-indigo-500'>
+              sign up to start your 14-day free trial
+            </Link>
+          </p>
         </div>
-        <div className='m-6'>
-          <form className='mb-4' onSubmit={handleSubmit}>
-            <div className='mb-6'>
-              <input
-                type='email'
-                name='email'
-                id='email'
-                value={credentials.email}
-                placeholder='Your email address'
-                className='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500'
-                onChange={handleEmailChange}
-              />
-            </div>
-            <div className='mb-6'>
-              <div className='flex justify-between mb-2'>
-                <a
-                  href='#!'
-                  className='text-sm text-gray-400 focus:outline-none focus:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-300'
-                >
-                  Forgot password?
-                </a>
+
+        <div className='mt-8 sm:mx-auto sm:w-full sm:max-w-md'>
+          <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
+            <form className='space-y-6' action='#' method='POST'>
+              <div>
+                <label htmlFor='email' className='block text-sm font-medium text-gray-700'>
+                  Email address
+                </label>
+                <div className='mt-1'>
+                  <input
+                    required
+                    id='email'
+                    name='email'
+                    type='email'
+                    autoComplete='email'
+                    className='appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+                  />
+                </div>
               </div>
-              <input
-                readOnly
-                type='password'
-                name='password'
-                id='password'
-                value={credentials.password}
-                placeholder='Your password'
-                className='w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500'
-              />
-            </div>
-            <div className='mb-6'>
-              <button
-                type='submit'
-                className='w-full px-3 py-4 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none duration-100 ease-in-out'
-              >
-                Sign in
-              </button>
-            </div>
-            <p className='text-sm text-center text-gray-400'>
-              Don&#x27;t have an account yet? &nbsp;
-              <a
-                href='/sign-up'
-                className='font-semibold text-indigo-500 focus:text-indigo-600 focus:outline-none focus:underline'
-              >
-                Sign up
-              </a>
-              .
-            </p>
-          </form>
 
-          <div className='flex flex-row justify-center mb-8'>
-            <span className='absolute bg-white px-4 text-gray-500'>or sign-in with</span>
-            <div className='w-full bg-gray-200 mt-3 h-px'></div>
-          </div>
+              <div>
+                <label htmlFor='password' className='block text-sm font-medium text-gray-700'>
+                  Password
+                </label>
+                <div className='mt-1'>
+                  <input
+                    required
+                    id='password'
+                    name='password'
+                    type='password'
+                    autoComplete='current-password'
+                    className='appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+                  />
+                </div>
+              </div>
 
-          <div className='flex flex-row gap-2'>
-            <button className='bg-green-500 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-green-600 duration-100 ease-in-out'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                aria-hidden='true'
-                role='img'
-                className='w-5'
-                preserveAspectRatio='xMidYMid meet'
-                viewBox='0 0 24 24'
-              >
-                <g fill='none'>
-                  <path
-                    fillRule='evenodd'
-                    clipRule='evenodd'
-                    d='M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm.14 19.018c-3.868 0-7-3.14-7-7.018c0-3.878 3.132-7.018 7-7.018c1.89 0 3.47.697 4.682 1.829l-1.974 1.978v-.004c-.735-.702-1.667-1.062-2.708-1.062c-2.31 0-4.187 1.956-4.187 4.273c0 2.315 1.877 4.277 4.187 4.277c2.096 0 3.522-1.202 3.816-2.852H12.14v-2.737h6.585c.088.47.135.96.135 1.474c0 4.01-2.677 6.86-6.72 6.86z'
-                    fill='currentColor'
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center'>
+                  <input
+                    id='remember-me'
+                    name='remember-me'
+                    type='checkbox'
+                    className='h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded'
                   />
-                </g>
-              </svg>
-              Google
-            </button>
-            <button className='bg-gray-700 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-gray-800 duration-100 ease-in-out'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                aria-hidden='true'
-                role='img'
-                className='w-5'
-                preserveAspectRatio='xMidYMid meet'
-                viewBox='0 0 24 24'
-              >
-                <g fill='none'>
-                  <path
-                    fillRule='evenodd'
-                    clipRule='evenodd'
-                    d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z'
-                    fill='currentColor'
-                  />
-                </g>
-              </svg>
-              Github
-            </button>
+                  <label htmlFor='remember-me' className='ml-2 block text-sm text-gray-900'>
+                    Remember me
+                  </label>
+                </div>
+
+                <div className='text-sm'>
+                  <a href='#forgot-your-password?' className='font-medium text-indigo-600 hover:text-indigo-500'>
+                    Forgot your password?
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <button
+                  type='submit'
+                  className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:from-purple-700 hover:to-indigo-700'
+                >
+                  Sign in
+                </button>
+              </div>
+            </form>
+
+            <div className='mt-6'>
+              <div className='relative'>
+                <div className='absolute inset-0 flex items-center'>
+                  <div className='w-full border-t border-gray-300' />
+                </div>
+                <div className='relative flex justify-center text-sm'>
+                  <span className='px-2 bg-white text-gray-500'>Or continue with</span>
+                </div>
+              </div>
+
+              <div className='mt-6 grid grid-cols-3 gap-3'>
+                <div>
+                  <a
+                    href='#sign-in-with-facebook'
+                    className='w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50'
+                  >
+                    <span className='sr-only'>Sign in with Facebook</span>
+                    <svg className='w-5 h-5' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20'>
+                      <path
+                        fillRule='evenodd'
+                        d='M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z'
+                        clipRule='evenodd'
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <div>
+                  <a
+                    href='#sign-in-with-twitter'
+                    className='w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50'
+                  >
+                    <span className='sr-only'>Sign in with Twitter</span>
+                    <svg className='w-5 h-5' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20'>
+                      <path d='M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84' />
+                    </svg>
+                  </a>
+                </div>
+
+                <div>
+                  <a
+                    href='#sign-in-with-gitHub'
+                    className='w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50'
+                  >
+                    <span className='sr-only'>Sign in with GitHub</span>
+                    <svg className='w-5 h-5' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20'>
+                      <path
+                        fillRule='evenodd'
+                        d='M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z'
+                        clipRule='evenodd'
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

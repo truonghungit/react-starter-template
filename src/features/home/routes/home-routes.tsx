@@ -6,6 +6,7 @@ const Home = lazy(() => import('../views/home/home'));
 const homeRoutes: Array<RouteObject> = [
   {
     path: '',
+    index: true,
     element: <Home />,
   },
 ];
