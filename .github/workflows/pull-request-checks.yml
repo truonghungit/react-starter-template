@@ -9,7 +9,7 @@ on:
 
 jobs:
   build_test:
-    name: "Build and Test"
+    name: 'Build and Test'
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile && yarn bootstrap
+        run: yarn install
 
       - name: Run unit tests with coverage
         run: yarn test:unit:coverage
