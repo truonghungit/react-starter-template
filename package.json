@@ -1,8 +1,9 @@
 {
-  "name": "react-starter-teamplate",
-  "version": "0.0.1",
+  "name": "react-starter-template",
+  "version": "1.0.0",
   "author": {
-    "name": "truonghungit",
+    "name": "Hung Pham",
+    "email": "truonghungit@gmail.com",
     "url": "https://github.com/truonghungit"
   },
   "scripts": {
