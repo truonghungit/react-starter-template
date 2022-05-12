@@ -190,12 +190,8 @@ export default function Home() {
           <div className='flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8'>
             <div className='flex justify-start lg:w-0 lg:flex-1'>
               <Link to='/'>
-                <span className='sr-only'>Workflow</span>
-                <img
-                  className='h-8 w-auto sm:h-10'
-                  src='https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg'
-                  alt=''
-                />
+                <span className='sr-only'>Coffee and Code Logo</span>
+                <img className='h-8 w-auto sm:h-10' src='images/logo.png' alt='Coffee and Code Logo' />
               </Link>
             </div>
             <div className='-mr-2 -my-2 md:hidden'>
