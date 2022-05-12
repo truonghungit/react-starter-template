@@ -12,12 +12,16 @@
 
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) starter template built with [Vite](https://vitejs.dev). We provide everything you'll need to get started building React Apps.
 
-**Awesome thing you get _out-of-the-box_ are:**
+## 🎯 Goals
+### Get started in seconds
 
-- [ReactJS 17](https://reactjs.org)
+This starter allows you to focus on development rather than learn and configure build tools.
+We've prepared the fantastic below for you.
+
+- [ReactJS](https://reactjs.org) with [TypeScript](https://www.typescriptlang.org) Always update to the latest version
 - [Vite](https://vitejs.dev) Next Generation Frontend Tooling
 - [TypeScript](https://www.typescriptlang.org)
-- [React Router 6](https://reactrouter.com/) Single Page App **(SPA)** navigation
+- [React Router](https://reactrouter.com/) Single Page App **(SPA)** navigation
 - [ESLint](https://eslint.org/) Enforce code standards
 - [Browserslist](https://github.com/browserslist/browserslist) Supported browsers
 - [Prettier](https://prettier.io/) Code formatting
@@ -26,33 +30,34 @@ This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang
 - [Jest](https://jestjs.io/) Test runner
 - [Testing Library](https://testing-library.com/) Test UI from a users perspective (for React and Cypress)
 - [Cypress](https://www.cypress.io)
-- [PULL_REQUEST_TEMPLATE](https://github.com/devonChurch/meatballs/) Consistent and helpful colabouration.
+- [Pull Request template](https://github.com/truonghungit/react-starter-template/blob/master/.github/pull_request_template.md) Consistent and helpful colabouration.
+- Example pages
 
-## 💻 Development
+### Recent best practices
+This repository provide an up to date example of React application following all recent best practices in various areas
 
-Create the project.
+## 💻 Getting started
+#### Create project
+
+Clone the latest version
 
 ```bash
-npx degit truonghungit/react-starter-template my-app
-```
-
-Access the project directory.
-
-```bash
+git clone https://github.com/truonghungit/react-starter-template.git my-app
 cd my-app
 ```
 
-Initialize a git repository.
+[Previous versions](https://github.com/truonghungit/react-starter-template/tags) are also available for download.
 
-```bash
-git init
-```
+You can also click on **_Use this template_** on GitHub
+![image](https://user-images.githubusercontent.com/9523581/167988431-84445e1c-9f64-4fbe-b93b-f0fa9d84f624.png)
 
-Install dependencies.
+#### Install dependencies.
 
 ```bash
 yarn install
 ```
+
+#### Start
 
 Start your application in local development server with hot reload at http://localhost:3000.
 
