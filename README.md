@@ -1,4 +1,4 @@
-# React Starter Template
+# <img src="./docs/assets/logo.png" alt="drawing" style="height:36px;"/> React Starter Template
 
 [![Pull Request Checks](https://github.com/truonghungit/react-starter-template/actions/workflows/pull-request-checks.yml/badge.svg)](https://github.com/truonghungit/react-starter-template/actions/workflows/pull-request-checks.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=truonghungit_react-starter-template&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=truonghungit_react-starter-template)
@@ -8,11 +8,12 @@
 [![license](https://img.shields.io/github/license/truonghungit/react-starter-template?style=flat)](https://github.com/truonghungit/react-starter-template/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 
-![React stater template](./docs/assets/react-stater-template.jpg)
+![React stater template](./docs/assets/react-stater-template.png)
 
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) starter template built with [Vite](https://vitejs.dev). We provide everything you'll need to get started building React Apps.
 
 ## 🎯 Goals
+
 ### Get started in seconds
 
 This starter allows you to focus on development rather than learn and configure build tools.
@@ -34,9 +35,11 @@ We've prepared the fantastic below for you.
 - Example pages
 
 ### Recent best practices
+
 This repository provide an up to date example of React application following all recent best practices in various areas
 
 ## 💻 Getting started
+
 #### Create project
 
 Clone the latest version
