@@ -12,13 +12,50 @@
 
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) starter template built with [Vite](https://vitejs.dev). We provide everything you'll need to get started building React Apps.
 
-## Table of Content |
 
-- [Live Demo](https://react-starter-template.vercel.app)
-- [Getting Started](#💻-getting-started)
-- [Goals](#🎯-goals)
-- [Make It Your Own](#😎-make-it-your-own)
-- [Changelog](https://github.com/truonghungit/react-starter-template/blob/master/CHANGELOG.md)
+#### [Live Demo](https://react-starter-template.vercel.app)
+#### [Changelog](https://github.com/truonghungit/react-starter-template/blob/master/CHANGELOG.md)
+
+## 🎯 Goals
+
+### Get started in seconds
+
+This starter allows you to focus on development rather than learn and configure build tools.
+We've prepared the fantastic below for you.
+
+
+- [Vite](https://vitejs.dev) Next Generation Frontend Tooling
+- [ReactJS](https://reactjs.org) with [TypeScript](https://www.typescriptlang.org) Always update to the latest version
+
+#### Testing
+- [Jest](https://jestjs.io/) Test runner
+- [Testing Library](https://testing-library.com/) Test UI from a users perspective (for React and Cypress)
+- [Cypress](https://www.cypress.io)
+
+#### Format and lint
+- [ESLint](https://eslint.org/) Enforce code standards & [Prettier](https://prettier.io/) Code formatting
+- [Browserslist](https://github.com/browserslist/browserslist) Supported browsers
+- [Commitizen](https://github.com/commitizen/cz-cli)
+- [Commitlint](https://commitlint.js.org)
+- [Lint Staged](https://github.com/okonet/lint-staged)  🚫💩 slip into your code base!
+
+#### Workflow
+- Github action for pull request checks
+- [Pull Request template](https://github.com/truonghungit/react-starter-template/blob/master/.github/pull_request_template.md) Consistent and helpful colabouration.
+
+#### Library
+- [React Router](https://reactrouter.com/) Single Page App **(SPA)** navigation
+- TailwindCSS Integrated
+- Headless ui & heroicons
+
+#### Example pages
+- Home page as landing page
+- Sign In, Sign Up pages,
+- Dashboard page
+
+### Recent best practices
+
+This repository provide an up to date example of React application following all recent best practices in various areas
 
 ## 💻 Getting started
 
@@ -34,6 +71,7 @@ cd my-app
 [Previous versions](https://github.com/truonghungit/react-starter-template/tags) are also available for download.
 
 You can also click on **_Use this template_** on GitHub
+
 ![image](https://user-images.githubusercontent.com/9523581/167988431-84445e1c-9f64-4fbe-b93b-f0fa9d84f624.png)
 
 #### Install dependencies.
@@ -49,43 +87,6 @@ Start your application in local development server with hot reload at http://loc
 ```bash
 yarn start
 ```
-
-## 🎯 Goals
-
-### Get started in seconds
-
-This starter allows you to focus on development rather than learn and configure build tools.
-We've prepared the fantastic below for you.
-
-- [ReactJS](https://reactjs.org) with [TypeScript](https://www.typescriptlang.org) Always update to the latest version
-- [Vite](https://vitejs.dev) Next Generation Frontend Tooling
-- [TypeScript](https://www.typescriptlang.org)
-- [React Router](https://reactrouter.com/) Single Page App **(SPA)** navigation
-- [ESLint](https://eslint.org/) Enforce code standards
-- [Browserslist](https://github.com/browserslist/browserslist) Supported browsers
-- [Prettier](https://prettier.io/) Code formatting
-- [Commitlint](https://commitlint.js.org)
-- [Commitizen](https://github.com/commitizen/cz-cli)
-- [Jest](https://jestjs.io/) Test runner
-- [Testing Library](https://testing-library.com/) Test UI from a users perspective (for React and Cypress)
-- [Cypress](https://www.cypress.io)
-- [Pull Request template](https://github.com/truonghungit/react-starter-template/blob/master/.github/pull_request_template.md) Consistent and helpful colabouration.
-- Example pages
-
-### Recent best practices
-
-This repository provide an up to date example of React application following all recent best practices in various areas
-
-## 😎 Make It Your Own
-
-When using this starter project to build your own application you might consider some of the following steps:
-
-- rename project in `package.json` `name` property and set appropriate version (eg `0.0.1` or `1.0.0`)
-- delete pre-existing `CHANGELOG.md` (you will generate your own with future releases of your features)
-- update the `README.md` content with your context
-- edit the title and Open Graph metadata properties in `index.html`
-- replace logo in `/public/images` folder
-- update github workflow if you need in `.github/workflows`
 
 ## 🤖 Testing
 
@@ -110,6 +111,18 @@ Run e2e tests
 ```bash
 yarn test:e2e
 ```
+
+## 😎 Make It Your Own
+
+When using this starter project to build your own application you might consider some of the following steps:
+
+- rename project in `package.json` `name` property and set appropriate version (eg `0.0.1` or `1.0.0`)
+- delete pre-existing `CHANGELOG.md` (you will generate your own with future releases of your features)
+- update the `README.md` content with your context
+- edit the title and Open Graph metadata properties in `index.html`
+- replace logo in `/public/images` folder
+- update github workflow if you need in `.github/workflows`
+
 
 ## 🌲 Branching
 
