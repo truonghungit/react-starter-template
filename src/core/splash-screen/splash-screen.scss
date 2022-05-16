@@ -1,0 +1,81 @@
+$color: #9333ea;
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111827;
+  color: #f9fafb;
+  z-index: 999999;
+  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: $color;
+  color: $color;
+  box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  -webkit-animation: dot-typing 1.5s infinite linear;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@-webkit-keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 $color, 9999px -10px 0 0 $color, 10014px 0 0 0 $color;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px -10px 0 0 $color;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 $color, 9999px -10px 0 0 $color, 10014px 0 0 0 $color;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px -10px 0 0 $color;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 $color, 9999px 0 0 0 $color, 10014px 0 0 0 $color;
+  }
+}

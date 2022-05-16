@@ -1,12 +1,13 @@
 import { RouteObject } from 'react-router-dom';
 
+import { NotFoundPage } from '@/core/error';
+
 import authRoutes from '../features/auth/routes';
 import dashboardRoutes from '../features/dashboard/routes';
 import homeRoutes from '../features/home/routes';
 import usersRoutes from '../features/users/routes';
 import MinimalLayout from '../layout/minimal-layout/minimal-layout';
 import PortalLayout from '../layout/portal-layout/portal-layout';
-import { NotFoundPage } from './components';
 
 const appRoutes: Array<RouteObject> = [
   ...homeRoutes,
